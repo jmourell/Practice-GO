@@ -13,13 +13,19 @@ type Rectangle struct {
 type Circle struct {
 	Radius float64
 }
-
-func (R Rectangle) Perimeter() float64 {
-	return (R.Height + R.Width) * 2
+type Triangle struct {
+	Base   float64
+	Height float64
 }
 
-func (R Rectangle) Area() float64 {
-	return (R.Height * R.Width)
+func (r Rectangle) Perimeter() float64 {
+	return (r.Height + r.Width) * 2
+}
+func (t Triangle) Area() float64 {
+	return (t.Base * t.Height) / 2
+}
+func (r Rectangle) Area() float64 {
+	return (r.Height * r.Width)
 }
 
 func (C Circle) Perimeter() float64 {
